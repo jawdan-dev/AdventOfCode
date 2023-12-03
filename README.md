@@ -4,7 +4,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 
 > NOTE: All code has been written in *C* and compiled using *GNU* for this year's submissions.
 
-> NOTE: This will be my first time using *C* aswell as my first attempt at Advent of Code.
+> NOTE: This will be my first time using *C* as well as my first attempt at Advent of Code.
 
 ## Submission Tracker
 
