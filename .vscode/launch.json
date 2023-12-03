@@ -1,0 +1,15 @@
+{
+	"configurations": [
+	{
+		"name": "(Windows) Launch",
+		"type": "cppdbg",
+		"request": "launch",
+		"program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+		"args": [],
+		"stopAtEntry": false,
+		"cwd": "${fileDirname}",
+		"environment": [],
+		"preLaunchTask": "Build Active File",
+	}
+	]
+}
