@@ -12,7 +12,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | :---: | ---- | :------: | :------: |
 | 1 | Trebuchet?! | &#9745; | &#9745; |
 | 2 | Cube Conundrum | &#9745; | &#9745; |
-| 3 | Gear Ratios | &#9744; | &#9744; |
+| 3 | Gear Ratios | &#9745; | &#9745; |
 | 4 | ... | &#9744; | &#9744; |
 | 5 | ... | &#9744; | &#9744; |
 | 6 | ... | &#9744; | &#9744; |
