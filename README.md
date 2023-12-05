@@ -14,7 +14,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 2 | Cube Conundrum | &#9745; | &#9745; |
 | 3 | Gear Ratios | &#9745; | &#9745; |
 | 4 | Scratchcards | &#9745; | &#9745; |
-| 5 | ... | &#9744; | &#9744; |
+| 5 | If You Give A Seed A Fertilizer | &#9745; | &#9745; |
 | 6 | ... | &#9744; | &#9744; |
 | 7 | ... | &#9744; | &#9744; |
 | 8 | ... | &#9744; | &#9744; |
