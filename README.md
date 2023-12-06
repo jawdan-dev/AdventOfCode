@@ -15,7 +15,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 3 | Gear Ratios | &#9745; | &#9745; |
 | 4 | Scratchcards | &#9745; | &#9745; |
 | 5 | If You Give A Seed A Fertilizer | &#9745; | &#9745; |
-| 6 | ... | &#9744; | &#9744; |
+| 6 | Wait For It | &#9745; | &#9745; |
 | 7 | ... | &#9744; | &#9744; |
 | 8 | ... | &#9744; | &#9744; |
 | 9 | ... | &#9744; | &#9744; |
