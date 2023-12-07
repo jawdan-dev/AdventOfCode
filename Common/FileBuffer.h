@@ -66,8 +66,13 @@ const bool FileBuffer_ReadUntilNextDelim(
 	this->m_readIndex = 0;
 
 	// Read file until delim.
-	while (!this->m_eof) {
-		if (feof(this->m_file)) {
+	while (!this->m_eof && this->m_file != nullptr) {
+		// Read character.
+		const size_t readAmount =
+			fread(&this->readBuffer[this->m_readIndex], sizeof(*this->readBuffer), 1, this->m_file);
+
+		// Error check.
+		if (readAmount <= 0) {
 			// Handle end of file.
 			this->m_eof = true;
 			this->readState = this->m_eofDelim;
@@ -77,11 +82,10 @@ const bool FileBuffer_ReadUntilNextDelim(
 				fclose(this->m_file);
 				this->m_file = nullptr;
 			}
-			break;
+			continue;
 		}
 
-		// Read character.
-		fread(&this->readBuffer[this->m_readIndex], sizeof(*this->readBuffer), 1, this->m_file);
+		// Get character.
 		const char c = this->readBuffer[this->m_readIndex];
 
 		// Handle delims.
