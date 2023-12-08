@@ -17,7 +17,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 5 | If You Give A Seed A Fertilizer | &#9745; | &#9745; |
 | 6 | Wait For It | &#9745; | &#9745; |
 | 7 | Camel Cards | &#9745; | &#9745; |
-| 8 | ... | &#9744; | &#9744; |
+| 8 | Haunted Wasteland | &#9745; | &#9745; |
 | 9 | ... | &#9744; | &#9744; |
 | 10 | ... | &#9744; | &#9744; |
 | 11 | ... | &#9744; | &#9744; |
