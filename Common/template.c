@@ -24,11 +24,25 @@ int main() {
 	while (FileBuffer_ReadUntilNextDelim(&fileBuffer)) {
 		// Processing.
 		switch (fileBuffer.readState) {
+			case ReadState_Line: {
+				// Read values.
+				char* valueStr = strtok(fileBuffer.readBuffer, " ");
+				while (valueStr != nullptr) {
+					// Read data.
+					size_t value;
+					sscanf(valueStr, "%zu", &value);
+
+					// Increment.
+					valueStr = strtok(nullptr, " ");
+				}
+
+				// TODO:
+			} break;
 			// TODO:
-			
 		}
 	}
 
+	// TODO:
 	// Output answer.
 	printf("Output: %zu\n", 0);
 	return 0;
