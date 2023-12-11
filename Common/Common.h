@@ -11,16 +11,15 @@ const size_t GCD(const size_t a, const size_t b) {
 	if (b == 0) return a;
 	if (a == b) return a;
 
-	// Values for calculation.
-	size_t ra = a, rb = b;
-
 	// Light Recursion.
-	if (ra > rb) {
-		while (ra > rb) ra -= rb;
-		return GCD(ra, rb);
+	if (a > b) {
+		const size_t mod = a % b;
+		if (mod == 0) return GCD(b, b);
+		return GCD(mod, b);
 	}
-	while (ra < rb) rb -= ra;
-	return GCD(ra, rb);
+	const size_t mod = b % a;
+	if (mod == 0) return GCD(a, a);
+	return GCD(a, mod);
 }
 const size_t LCM(const size_t a, const size_t b) {
 	return (a * b) / GCD(a, b);
