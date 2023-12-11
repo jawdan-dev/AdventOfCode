@@ -20,7 +20,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 8 | Haunted Wasteland | &#9745; | &#9745; |
 | 9 | Mirage Maintenance | &#9745; | &#9745; |
 | 10 | Pipe Maze | &#9745; | &#9745; |
-| 11 | ... | &#9744; | &#9744; |
+| 11 | Cosmic Expansion | &#9745; | &#9745; |
 | 12 | ... | &#9744; | &#9744; |
 | 13 | ... | &#9744; | &#9744; |
 | 14 | ... | &#9744; | &#9744; |
