@@ -21,7 +21,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 9 | Mirage Maintenance | &#9745; | &#9745; |
 | 10 | Pipe Maze | &#9745; | &#9745; |
 | 11 | Cosmic Expansion | &#9745; | &#9745; |
-| 12 | ... | &#9744; | &#9744; |
+| 12 | Hot Springs | &#9745; | &#9745; |
 | 13 | ... | &#9744; | &#9744; |
 | 14 | ... | &#9744; | &#9744; |
 | 15 | ... | &#9744; | &#9744; |
