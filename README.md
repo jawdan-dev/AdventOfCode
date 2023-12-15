@@ -24,7 +24,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 12 | Hot Springs | &#9745; | &#9745; |
 | 13 | Point of Incidence | &#9745; | &#9745; |
 | 14 | Parabolic Reflector Dish | &#9745; | &#9745; |
-| 15 | ... | &#9744; | &#9744; |
+| 15 | Lens Library | &#9745; | &#9745; |
 | 16 | ... | &#9744; | &#9744; |
 | 17 | ... | &#9744; | &#9744; |
 | 18 | ... | &#9744; | &#9744; |
