@@ -15,7 +15,7 @@ enum RockType {
 int main() {
 	// Create file buffer.
 	struct FileBuffer fileBuffer;
-	FileBuffer_OpenFile(&fileBuffer, "input.example.1.txt");
+	FileBuffer_OpenFile(&fileBuffer, "input.txt");
 
 	// File delims.
 	struct FileDelim delims[] = {
