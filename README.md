@@ -25,7 +25,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 13 | Point of Incidence | &#9745; | &#9745; |
 | 14 | Parabolic Reflector Dish | &#9745; | &#9745; |
 | 15 | Lens Library | &#9745; | &#9745; |
-| 16 | ... | &#9744; | &#9744; |
+| 16 | The Floor Will Be Lava | &#9745; | &#9745; |
 | 17 | ... | &#9744; | &#9744; |
 | 18 | ... | &#9744; | &#9744; |
 | 19 | ... | &#9744; | &#9744; |
