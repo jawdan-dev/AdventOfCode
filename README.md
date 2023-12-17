@@ -26,7 +26,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 14 | Parabolic Reflector Dish | &#9745; | &#9745; |
 | 15 | Lens Library | &#9745; | &#9745; |
 | 16 | The Floor Will Be Lava | &#9745; | &#9745; |
-| 17 | ... | &#9744; | &#9744; |
+| 17 | Clumsy Crucible | &#9745; | &#9745; |
 | 18 | ... | &#9744; | &#9744; |
 | 19 | ... | &#9744; | &#9744; |
 | 20 | ... | &#9744; | &#9744; |
