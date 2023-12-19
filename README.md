@@ -28,7 +28,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 16 | The Floor Will Be Lava | &#9745; | &#9745; |
 | 17 | Clumsy Crucible | &#9745; | &#9745; |
 | 18 | Lavaduct Lagoon | &#9745; | &#9745; |
-| 19 | ... | &#9744; | &#9744; |
+| 19 | Aplenty | &#9745; | &#9745; |
 | 20 | ... | &#9744; | &#9744; |
 | 21 | ... | &#9744; | &#9744; |
 | 22 | ... | &#9744; | &#9744; |
