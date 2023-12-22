@@ -31,7 +31,7 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 19 | Aplenty | &#9745; | &#9745; |
 | 20 | Pulse Propagation | &#9745; | &#9745; |
 | 21 | Step Counter | &#9745; | &#9744; |
-| 22 | ... | &#9744; | &#9744; |
+| 22 | Sand Slabs | &#9745; | &#9745; |
 | 23 | ... | &#9744; | &#9744; |
 | 24 | ... | &#9744; | &#9744; |
 | 25 | ... | &#9744; | &#9744; |
