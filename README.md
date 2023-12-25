@@ -34,5 +34,5 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 22 | Sand Slabs | &#9745; | &#9745; |
 | 23 | A Long Walk | &#9745; | &#9745; |
 | 24 | Never Tell Me The Odds | &#9745; | &#9745; |
-| 25 | ... | &#9744; | &#9744; |
+| 25 | Snowverload | &#9745; | &#9745; |
 ---
