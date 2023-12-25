@@ -20,10 +20,10 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 8 | Haunted Wasteland | &#9745; | &#9745; | 9061 | 6307 |
 | 9 | Mirage Maintenance | &#9745; | &#9745; | 6463 | 5492 |
 | 10 | Pipe Maze | &#9745; | &#9745; | 2723 | 2972 |
-| 11 | Cosmic Expansion | &#9745; | &#9745; | 1494 | <mark>994</mark> |
+| 11 | Cosmic Expansion | &#9745; | &#9745; | 1494 | ==994== |
 | 12 | Hot Springs | &#9745; | &#9745; | 5792 | 5913 |
 | 13 | Point of Incidence | &#9745; | &#9745; | 3204 | 2372 |
-| 14 | Parabolic Reflector Dish | &#9745; | &#9745; | <mark>767<mark/> | 4641 |
+| 14 | Parabolic Reflector Dish | &#9745; | &#9745; | ==767== | 4641 |
 | 15 | Lens Library | &#9745; | &#9745; | 2232 | 4979 |
 | 16 | The Floor Will Be Lava | &#9745; | &#9745; | 1752 | 1633 |
 | 17 | Clumsy Crucible | &#9745; | &#9745; | 4547 | 4939 |
@@ -33,5 +33,5 @@ This repo is used to contain my code for [Advent of Code 2023](https://adventofc
 | 21 | Step Counter | &#9745; | &#9744; | 3219 | 2086 |
 | 22 | Sand Slabs | &#9745; | &#9745; | 2758 | 2233 |
 | 23 | A Long Walk | &#9745; | &#9745; | 1852 | 1972 |
-| 24 | Never Tell Me The Odds | &#9745; | &#9745; | <mark>857<mark/> | 1523 |
+| 24 | Never Tell Me The Odds | &#9745; | &#9745; | ==857== | 1523 |
 | 25 | Snowverload | &#9745; | &#9745; | 3668 | 3018 |
