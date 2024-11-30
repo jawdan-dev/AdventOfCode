@@ -128,7 +128,7 @@ int main() {
 		totalMoves = startingNodeMoves[0];
 		for (size_t i = 1; i < startingNodeCount; i++) {
 			// LCM.
-			totalMoves = LCM(totalMoves, startingNodeMoves[i]);
+			totalMoves = lcm(totalMoves, startingNodeMoves[i]);
 		}
 	}
 
