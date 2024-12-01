@@ -19,6 +19,14 @@
 		exit(1); \
 	}
 
+#define QSORT_FUNCTION(name, type) \
+int name(const void* a, const void* b) { \
+	const type av = *(type*)a, bv = *(type*)b; \
+	if (av < bv) return -1; \
+	if (av > bv) return 1; \
+	return 0; \
+}
+
 const int abs(const int v) {
 	return v >= 0 ? v : -v;
 }
