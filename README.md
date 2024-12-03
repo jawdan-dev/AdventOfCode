@@ -11,8 +11,8 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 |  Day  | Name               | Part 1  | Part 2  | Pt.1 Rank | Pt.2 Rank |
 | :---: | ------------------ | :-----: | :-----: | :-------: | :-------: |
 |   1   | Historian Hysteria | &#9745; | &#9745; |   4503    |   4575    |
-|   2   | Red-Nosed Reports  | &#9744; | &#9744; |   3990    |   4265    |
-|   3   |                    | &#9744; | &#9744; |           |           |
+|   2   | Red-Nosed Reports  | &#9745; | &#9745; |   3990    |   4265    |
+|   3   | Mull It Over       | &#9745; | &#9745; |   5817    |   2763    |
 |   4   |                    | &#9744; | &#9744; |           |           |
 |   5   |                    | &#9744; | &#9744; |           |           |
 |   6   |                    | &#9744; | &#9744; |           |           |
