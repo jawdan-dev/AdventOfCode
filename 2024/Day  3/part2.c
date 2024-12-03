@@ -11,7 +11,7 @@ int main() {
 
 		int a, b;
 		for (int i = 0; i < fileReader.readBufferLength; i++) {
-			char* str = fileReader.readBuffer + i;
+			const char* str = fileReader.readBuffer + i;
 
 			// Check for do's and don'ts
 			if (strncmp(str, "do()", 4) == 0) {
@@ -22,10 +22,10 @@ int main() {
 				continue;
 			}
 
-			// God's lack of faith in muls has shown itself to us, brother.
+			// God's lack of faith in the muls has shown itself to us, bröther.
 			if (!doMult) continue;
 
-			// Check for mul(..., ...)
+			// Check for mul(x,y).
 			if (strncmp(str, "mul(", 4) != 0) continue;
 			str += 4;
 
