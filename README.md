@@ -13,7 +13,7 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 |   1   | Historian Hysteria | &#9745; | &#9745; |   4503    |   4575    |
 |   2   | Red-Nosed Reports  | &#9745; | &#9745; |   3990    |   4265    |
 |   3   | Mull It Over       | &#9745; | &#9745; |   5817    |   2763    |
-|   4   |                    | &#9744; | &#9744; |           |           |
+|   4   | Ceres Search       | &#9745; | &#9745; |   3799    |   2579    |
 |   5   |                    | &#9744; | &#9744; |           |           |
 |   6   |                    | &#9744; | &#9744; |           |           |
 |   7   |                    | &#9744; | &#9744; |           |           |
