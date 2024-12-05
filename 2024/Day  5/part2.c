@@ -55,7 +55,7 @@ int main() {
 				}
 			}
 		}
-		// Only print if innately ordered correctly.
+		// Only print if not innately ordered correctly.
 		if (!innatelyOrdered) totalMiddlePages += line[lineCount / 2];
 	}
 	printf("Middle page sum: %i\n", totalMiddlePages);
