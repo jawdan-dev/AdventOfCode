@@ -15,7 +15,7 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 |   3   | Mull It Over       | &#9745; | &#9745; |   5817    |   2763    |
 |   4   | Ceres Search       | &#9745; | &#9745; |   3799    |   2579    |
 |   5   | Historian Hysteria | &#9745; | &#9745; |   6030    |   2999    |
-|   6   |                    | &#9744; | &#9744; |           |           |
+|   6   | Guard Gallivant    | &#9745; | &#9745; |   3407    |   7683    |
 |   7   |                    | &#9744; | &#9744; |           |           |
 |   8   |                    | &#9744; | &#9744; |           |           |
 |   9   |                    | &#9744; | &#9744; |           |           |
