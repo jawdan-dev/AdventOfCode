@@ -5,20 +5,15 @@ const bool validTest(const valueType target, const valueType value, const valueT
 	if (remainingCount == 0) return target == value;
 	if (value > target) return false;
 
+	// Setup test data.
 	const int testCount = remainingCount - 1;
-	valueType* testNumbers = malloc(sizeof(valueType) * testCount);
-
-	// Copy numbers.
-	for (int j = 0; j < testCount; j++)
-		testNumbers[j] = remaining[j + 1];
+	const valueType* const testNumbers = remaining + 1;
 	const valueType usedNumber = remaining[0];
 
 	// Run tests.
 	const bool result =
 		(value > 0 && validTest(target, value * usedNumber, testNumbers, testCount)) ||
 		validTest(target, value + usedNumber, testNumbers, testCount);
-
-	free(testNumbers);
 
 	return result;
 }
@@ -40,13 +35,8 @@ int main() {
 		testNumberCount = 0;
 		while (FileReader_readNextLLU(&fileReader, &testNumbers[testNumberCount])) testNumberCount++;
 
-		if (validTest(target, 0, testNumbers, testNumberCount)) {
+		if (validTest(target, 0, testNumbers, testNumberCount))
 			testTotal += target;
-			printf("%llu was successful * \n", target);
-		} else {
-			printf("%llu was unsuccessful\n", target);
-		}
 	}
-
 	printf("Total covered: %llu\n", testTotal);
 }
