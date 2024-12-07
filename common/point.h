@@ -9,7 +9,7 @@ typedef struct {
 const bool Point_equal(const Point* p1, const Point* p2) {
 	return p1->x == p2->x && p1->y == p2->y;
 }
-const bool Point_equal(const Point p1, const Point p2) {
+const bool Point_equalRaw(const Point p1, const Point p2) {
 	return Point_equal(&p1, &p2);
 }
 const Point Point_add(const Point* p1, const Point* p2) {

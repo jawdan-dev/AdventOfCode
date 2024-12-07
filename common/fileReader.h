@@ -29,25 +29,30 @@ const FileReader FileReader_getInput() {
 	return fileReader;
 }
 
-const bool FileReader_readNextInt(FileReader* const fileReader, int* const out) {
-	// Find start of number.
-	while (fileReader->partialReadIndex < fileReader->readBufferLength &&
-		!('0' <= fileReader->readBuffer[fileReader->partialReadIndex] &&
-			fileReader->readBuffer[fileReader->partialReadIndex] <= '9'))
-		fileReader->partialReadIndex++;
-	if (fileReader->partialReadIndex >= fileReader->readBufferLength) return false;
-
-	// Read number.
-	*out = 0;
-	while (fileReader->partialReadIndex < fileReader->readBufferLength &&
-			'0' <= fileReader->readBuffer[fileReader->partialReadIndex] &&
-				fileReader->readBuffer[fileReader->partialReadIndex] <= '9') {
-		*out *= 10;
-		*out += fileReader->readBuffer[fileReader->partialReadIndex] - '0';
-		fileReader->partialReadIndex++;
-	}
-	return true;
+#define FileReader_readINTTYPE(name, type) \
+const bool FileReader_readNext ## name(FileReader* const fileReader, type* const out) { \
+	while (fileReader->partialReadIndex < fileReader->readBufferLength && \
+		!('0' <= fileReader->readBuffer[fileReader->partialReadIndex] && \
+			fileReader->readBuffer[fileReader->partialReadIndex] <= '9')) \
+		fileReader->partialReadIndex++; \
+	if (fileReader->partialReadIndex >= fileReader->readBufferLength) return false; \
+	*out = 0; \
+	while (fileReader->partialReadIndex < fileReader->readBufferLength && \
+			'0' <= fileReader->readBuffer[fileReader->partialReadIndex] && \
+				fileReader->readBuffer[fileReader->partialReadIndex] <= '9') { \
+		*out *= 10; \
+		*out += fileReader->readBuffer[fileReader->partialReadIndex] - '0'; \
+		fileReader->partialReadIndex++; \
+	} \
+	return true; \
 }
+
+FileReader_readINTTYPE(Int, int);
+FileReader_readINTTYPE(UInt, unsigned int);
+FileReader_readINTTYPE(LLI, long long);
+FileReader_readINTTYPE(LLU, unsigned long long);
+
+#undef FileReader_readINTTYPE
 
 void FileReader_readUntilDelim(FileReader* const fileReader, const char* deliminators) {
 	const size_t delimCount = strlen(deliminators);
