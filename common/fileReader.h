@@ -13,6 +13,8 @@ typedef struct {
 } FileReader;
 
 void FileReader_constructor(FileReader* const fileReader, const char* filePath) {
+	printf("\n\n\n"); // Sorry to all the old submissions.
+
 	fileReader->file = fopen(filePath, "rb");
 	ASSERT(fileReader->file, "Failed to open file reader.");
 
@@ -28,31 +30,6 @@ const FileReader FileReader_getInput() {
 	FileReader_constructor(&fileReader, "./input.txt");
 	return fileReader;
 }
-
-#define FileReader_readINTTYPE(name, type) \
-const bool FileReader_readNext ## name(FileReader* const fileReader, type* const out) { \
-	while (fileReader->partialReadIndex < fileReader->readBufferLength && \
-		!('0' <= fileReader->readBuffer[fileReader->partialReadIndex] && \
-			fileReader->readBuffer[fileReader->partialReadIndex] <= '9')) \
-		fileReader->partialReadIndex++; \
-	if (fileReader->partialReadIndex >= fileReader->readBufferLength) return false; \
-	*out = 0; \
-	while (fileReader->partialReadIndex < fileReader->readBufferLength && \
-			'0' <= fileReader->readBuffer[fileReader->partialReadIndex] && \
-				fileReader->readBuffer[fileReader->partialReadIndex] <= '9') { \
-		*out *= 10; \
-		*out += fileReader->readBuffer[fileReader->partialReadIndex] - '0'; \
-		fileReader->partialReadIndex++; \
-	} \
-	return true; \
-}
-
-FileReader_readINTTYPE(Int, int);
-FileReader_readINTTYPE(UInt, unsigned int);
-FileReader_readINTTYPE(LLI, long long);
-FileReader_readINTTYPE(LLU, unsigned long long);
-
-#undef FileReader_readINTTYPE
 
 void FileReader_readUntilDelim(FileReader* const fileReader, const char* deliminators) {
 	const size_t delimCount = strlen(deliminators);
@@ -82,4 +59,51 @@ void FileReader_readUntilDelim(FileReader* const fileReader, const char* delimin
 
 	// Reset partial read head.
 	fileReader->partialReadIndex = 0;
+}
+
+#define FileReader_readINTTYPE(name, type) \
+const bool FileReader_readNext ## name(FileReader* const fileReader, type* const out) { \
+	while (fileReader->partialReadIndex < fileReader->readBufferLength && \
+		!('0' <= fileReader->readBuffer[fileReader->partialReadIndex] && \
+			fileReader->readBuffer[fileReader->partialReadIndex] <= '9')) \
+		fileReader->partialReadIndex++; \
+	if (fileReader->partialReadIndex >= fileReader->readBufferLength) return false; \
+	*out = 0; \
+	while (fileReader->partialReadIndex < fileReader->readBufferLength && \
+			'0' <= fileReader->readBuffer[fileReader->partialReadIndex] && \
+				fileReader->readBuffer[fileReader->partialReadIndex] <= '9') { \
+		*out *= 10; \
+		*out += fileReader->readBuffer[fileReader->partialReadIndex] - '0'; \
+		fileReader->partialReadIndex++; \
+	} \
+	return true; \
+}
+
+FileReader_readINTTYPE(Int, int);
+FileReader_readINTTYPE(UInt, unsigned int);
+FileReader_readINTTYPE(LLI, long long);
+FileReader_readINTTYPE(LLU, unsigned long long);
+
+#undef FileReader_readINTTYPE
+
+void FileReader_readMap(FileReader* const fileReader, char* map, const int maxWidth, const int maxHeight, int* const width, int* const height) {
+	*width = 0;
+	*height = 0;
+
+	while (!fileReader->endReached) {
+		// Read map line.
+		FileReader_readUntilDelim(fileReader, "\n");
+
+		// Update dimension.
+		*width = fileReader->readBufferLength;
+		ASSERT(*width <= maxWidth, "Map width exceeded.");
+		ASSERT(*height < maxHeight, "Map height exceeded.");
+
+		// Move line into memory.
+		for (int i = 0; i < *width; i++)
+			map[(i * maxHeight) + *height] = fileReader->readBuffer[i];
+
+		// Update dimension.
+		(*height)++;
+	}
 }
