@@ -18,7 +18,7 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 |   6   | Guard Gallivant       | &#9745; | &#9745; |   3407    |   7683    |
 |   7   | Bridge Repair         | &#9745; | &#9745; |   7597    |   6320    |
 |   8   | Resonant Collinearity | &#9745; | &#9745; |   3755    |   2958    |
-|   9   |                       | &#9744; | &#9744; |           |           |
+|   9   | Disk Fragmenter       | &#9745; | &#9745; |   8124    |   4565    |
 |  10   |                       | &#9744; | &#9744; |           |           |
 |  11   |                       | &#9744; | &#9744; |           |           |
 |  12   |                       | &#9744; | &#9744; |           |           |
