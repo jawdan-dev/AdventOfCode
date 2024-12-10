@@ -19,7 +19,7 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 |   7   | Bridge Repair         | &#9745; | &#9745; |   7597    |   6320    |
 |   8   | Resonant Collinearity | &#9745; | &#9745; |   3755    |   2958    |
 |   9   | Disk Fragmenter       | &#9745; | &#9745; |   8124    |   4565    |
-|  10   |                       | &#9744; | &#9744; |           |           |
+|  10   | Hoof It               | &#9745; | &#9745; |   2715    |   2043    |
 |  11   |                       | &#9744; | &#9744; |           |           |
 |  12   |                       | &#9744; | &#9744; |           |           |
 |  13   |                       | &#9744; | &#9744; |           |           |
