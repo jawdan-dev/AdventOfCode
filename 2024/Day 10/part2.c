@@ -3,7 +3,6 @@
 
 #define MAP_MAX 512
 char map[MAP_MAX][MAP_MAX];
-bool reachable[MAP_MAX][MAP_MAX];
 int width = 0, height = 0;
 
 #define NODES_MAX 1000
@@ -12,10 +11,6 @@ typedef struct {
 } Node;
 
 const int startTrail(const Point startingPoint) {
-	for (int i = 0; i < width; i++)
-		for (int j = 0; j < height; j++)
-			reachable[i][j] = false;
-	//
 	static Node nodes[NODES_MAX];
 	int nodeCount = 0;
 	nodes[nodeCount++] = (Node) {
