@@ -9,13 +9,14 @@ typedef struct {
 typedef ValueType MemoizationResult;
 #include <common/memoization.h>
 
-const size_t handleStone(const ValueType stoneValue, const int remainingDepth) {
-	if (remainingDepth == 0) return 1;
+const size_t countStones(const ValueType stoneValue, const int depth) {
+	// Exit case.
+	if (depth == 0) return 1;
 
 	// Cache key.
 	const MemoizationKey key = {
 		.stoneValue = stoneValue,
-		.depth = remainingDepth,
+		.depth = depth,
 	};
 
 	// Check cache.
@@ -24,7 +25,7 @@ const size_t handleStone(const ValueType stoneValue, const int remainingDepth) {
 
 	if (stoneValue == 0) {
 		// Replace stone with a 1.
-		result = handleStone(1, remainingDepth - 1);
+		result = countStones(1, depth - 1);
 	} else {
 		// Get stone digit count.
 		int digitCount = 0;
@@ -37,7 +38,7 @@ const size_t handleStone(const ValueType stoneValue, const int remainingDepth) {
 		// Check if even amount of digits.
 		if (digitCount % 2 == 1) {
 			// Multiply stone by 2024.
-			result = handleStone(stoneValue * 2024, remainingDepth - 1);
+			result = countStones(stoneValue * 2024, depth - 1);
 		} else {
 			// Split stone.
 			ValueType left = stoneValue, right = 0, place = 1;
@@ -46,7 +47,7 @@ const size_t handleStone(const ValueType stoneValue, const int remainingDepth) {
 				place *= 10;
 				left /= 10;
 			}
-			result = handleStone(left, remainingDepth - 1) + handleStone(right, remainingDepth - 1);
+			result = countStones(left, depth - 1) + countStones(right, depth - 1);
 		}
 	}
 
@@ -67,7 +68,7 @@ int main() {
 	//
 	ValueType stoneTotal = 0;
 	for (int i = 0; i < stoneCount; i++)
-		stoneTotal += handleStone(stones[i], 75);
+		stoneTotal += countStones(stones[i], 75);
 	//
-	printf("Stone count: %lli\n", stoneTotal);
+	printf("Total stones: %lli\n", stoneTotal);
 }
