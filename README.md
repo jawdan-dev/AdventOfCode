@@ -21,7 +21,7 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 |   9   | Disk Fragmenter       | &#9745; | &#9745; |   8124    |   4565    |
 |  10   | Hoof It               | &#9745; | &#9745; |   2715    |   2043    |
 |  11   | Plutonian Pebbles     | &#9745; | &#9745; |   5558    |   2277    |
-|  12   |                       | &#9744; | &#9744; |           |           |
+|  12   | Garden Groups         | &#9745; | &#9745; |   3096    |   1302    |
 |  13   |                       | &#9744; | &#9744; |           |           |
 |  14   |                       | &#9744; | &#9744; |           |           |
 |  15   |                       | &#9744; | &#9744; |           |           |
