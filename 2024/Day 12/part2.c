@@ -4,16 +4,18 @@
 
 typedef long long ValueType;
 
+#define CHECKED '*'
+#define FINISHED '-'
+
 #define MAP_MAX 512
 char map[MAP_MAX][MAP_MAX];
 unsigned char sides[MAP_MAX][MAP_MAX];
 int width = 0, height = 0;
 
-#define CHECKED '*'
-#define FINISHED '-'
-
 void calculateSides(const Point* point) {
 	const char plotChar = map[point->x][point->y];
+
+	// Skip if already checked / evaluated.
 	if (plotChar == CHECKED || plotChar == FINISHED) return;
 	map[point->x][point->y] = CHECKED;
 
@@ -23,10 +25,12 @@ void calculateSides(const Point* point) {
 
 		if (0 <= checkPoint.x && checkPoint.x < width && 0 <= checkPoint.y && checkPoint.y < height &&
 			(map[checkPoint.x][checkPoint.y] == plotChar || map[checkPoint.x][checkPoint.y] == CHECKED)) {
+			// Recurse.
 			calculateSides(&checkPoint);
 			continue;
 		}
 
+		// Mark fence side.
 		sides[point->x][point->y] |= Direction_getFlag(checks[i]);
 	}
 }
@@ -34,22 +38,28 @@ void calculateSides(const Point* point) {
 const ValueType getPerimeterCost() {
 	ValueType areaCount = 0, sideCount = 0;
 
-	static const Direction checks[] = { Direction_North, Direction_East, Direction_South, Direction_West };
-
+	// Count area.
 	for (int i = 0; i < width; i++)
 		for (int j = 0; j < height; j++)
 			if (map[i][j] == CHECKED)
 				areaCount++;
 
-	static const Direction horizontalChecks[] = { Direction_North, Direction_South };
-	for (int k = 0; k < ARRAY_SIZE(horizontalChecks); k++) {
-		const unsigned char check = Direction_getFlag(horizontalChecks[k]);
-		for (int j = 0; j < height; j++) {
+	// Count sides (greedy-esque).
+	static const Direction checks[] = { Direction_North, Direction_East, Direction_South, Direction_West };
+	for (int k = 0; k < ARRAY_SIZE(checks); k++) {
+		// Check information.
+		const bool isHorizontal = checks[k] == Direction_North || checks[k] == Direction_South;
+		const unsigned char check = Direction_getFlag(checks[k]);
+
+		for (int j = 0; j < (isHorizontal ? height : width); j++) {
 			int sideLength = 0;
-			for (int i = 0; i < width; i++) {
-				if (sides[i][j] & check) {
+			for (int i = 0; i < (isHorizontal ? width : height); i++) {
+				const unsigned char sideFlags = isHorizontal ? sides[i][j] : sides[j][i];
+				if (sideFlags & check) {
+					// Side started / continued.
 					sideLength++;
 				} else {
+					// Gap in side found.
 					if (sideLength) sideCount++;
 					sideLength = 0;
 				}
@@ -58,26 +68,11 @@ const ValueType getPerimeterCost() {
 		}
 	}
 
-	static const Direction verticalChecks[] = { Direction_East, Direction_West };
-	for (int k = 0; k < ARRAY_SIZE(horizontalChecks); k++) {
-		const unsigned char check = Direction_getFlag(verticalChecks[k]);
-		for (int i = 0; i < width; i++) {
-			int sideLength = 0;
-			for (int j = 0; j < height; j++) {
-				if (sides[i][j] & check) {
-					sideLength++;
-				} else {
-					if (sideLength) sideCount++;
-					sideLength = 0;
-				}
-			}
-			if (sideLength) sideCount++;
-		}
-	}
-
+	// Return perimeter cost.
 	return areaCount * sideCount;
 }
 void finishChecks() {
+	// Reset.
 	for (int i = 0; i < width; i++) {
 		for (int j = 0; j < height; j++) {
 			if (map[i][j] == CHECKED)
