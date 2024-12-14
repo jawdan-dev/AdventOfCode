@@ -23,7 +23,7 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 |  11   | Plutonian Pebbles     | &#9745; | &#9745; |   5558    |   2277    |
 |  12   | Garden Groups         | &#9745; | &#9745; |   3096    |   1302    |
 |  13   | Claw Contraption      | &#9745; | &#9745; |   2620    |   5353    |
-|  14   |                       | &#9744; | &#9744; |           |           |
+|  14   | Restroom Redoubt      | &#9745; | &#9745; |   1059    |    480    |
 |  15   |                       | &#9744; | &#9744; |           |           |
 |  16   |                       | &#9744; | &#9744; |           |           |
 |  17   |                       | &#9744; | &#9744; |           |           |
