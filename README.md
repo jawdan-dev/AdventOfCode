@@ -25,7 +25,7 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 |  13   | Claw Contraption      | &#9745; | &#9745; |   2620    |   5353    |
 |  14   | Restroom Redoubt      | &#9745; | &#9745; |   1059    |    480    |
 |  15   | Warehouse Woes        | &#9745; | &#9745; |   3812    |   1896    |
-|  16   |                       | &#9744; | &#9744; |           |           |
+|  16   | Reindeer Maze         | &#9745; | &#9745; |   1366    |   1104    |
 |  17   |                       | &#9744; | &#9744; |           |           |
 |  18   |                       | &#9744; | &#9744; |           |           |
 |  19   |                       | &#9744; | &#9744; |           |           |
