@@ -31,7 +31,7 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 | 15  | Warehouse Woes         | &#9745; | &#9745; |   3812    |       1896       |
 | 16  | Reindeer Maze          | &#9745; | &#9745; |   1366    |       1104       |
 | 17  | Chronospatial Computer | &#9745; | &#9745; |   2398    | <mark>798</mark> |
-| 18  |                        | &#9744; | &#9744; |           |                  |
+| 18  | RAM Run                | &#9745; | &#9745; |   4343    |       3497       |
 | 19  |                        | &#9744; | &#9744; |           |                  |
 | 20  |                        | &#9744; | &#9744; |           |                  |
 | 21  |                        | &#9744; | &#9744; |           |                  |
