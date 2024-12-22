@@ -17,6 +17,13 @@ MemoizationNode** Memoization_findRaw(MemoizationNode** const root, const Memoiz
 	if (cmp > 0) return Memoization_findRaw((MemoizationNode**)&(*root)->right, key);
 	return root;
 }
+const void Memoization_clearRaw(MemoizationNode** const root) {
+	if (*root == nullptr) return;
+	Memoization_clearRaw((MemoizationNode**)&(*root)->left);
+	Memoization_clearRaw((MemoizationNode**)&(*root)->right);
+	free(*root);
+	(*root) = nullptr;
+}
 
 void Memoization_add(const MemoizationKey* const key, const MemoizationResult* const result) {
 	MemoizationNode** nodePtr = Memoization_findRaw(&Memoization_tree, key);
@@ -41,4 +48,9 @@ const bool Memoization_getResult(const MemoizationKey* const key, MemoizationRes
 
 	memcpy(result, &node->result, sizeof(MemoizationResult));
 	return true;
+}
+
+const void Memoization_clear() {
+	Memoization_clearRaw(&Memoization_tree);
+	Memoization_count = 0;
 }
