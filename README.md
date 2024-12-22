@@ -35,7 +35,7 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 |  19   | Linen Layout           | &#9745; | &#9745; |       5214       |       4263       |
 |  20   | Race Condition         | &#9745; | &#9745; | <mark>643</mark> |       4550       |
 |  21   | Keypad Conundrum       | &#9745; | &#9745; |       3191       |       1789       |
-|  22   |                        | &#9744; | &#9744; |                  |                  |
+|  22   | Monkey Market          | &#9745; | &#9745; |       1489       |       1657       |
 |  23   |                        | &#9744; | &#9744; |                  |                  |
 |  24   |                        | &#9744; | &#9744; |                  |                  |
 |  25   |                        | &#9744; | &#9744; |                  |                  |
