@@ -37,7 +37,7 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 |  21   | Keypad Conundrum       | &#9745; | &#9745; |       3191       |       1789       |
 |  22   | Monkey Market          | &#9745; | &#9745; |       1489       |       1657       |
 |  23   | LAN Party              | &#9745; | &#9745; |       2096       |       3377       |
-|  24   |                        | &#9744; | &#9744; |                  |                  |
+|  24   | Crossed Wires          | &#9745; | &#9745; |       2667       |       1846       |
 |  25   |                        | &#9744; | &#9744; |                  |                  |
 
 ## Advent of Code 2023
