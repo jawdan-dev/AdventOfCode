@@ -93,6 +93,7 @@ void FileReader_readMap(FileReader* const fileReader, char* map, const int maxWi
 	while (!fileReader->endReached) {
 		// Read map line.
 		FileReader_readUntilDelim(fileReader, "\n");
+		if (fileReader->readBufferLength <= 0) break;
 
 		// Update dimension.
 		*width = fileReader->readBufferLength;
