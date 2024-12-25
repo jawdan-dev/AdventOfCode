@@ -2,15 +2,17 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdint.h>
 #include <string.h>
 #include <stdbool.h>
 #include <math.h>
 
+typedef int64_t SafeType;
 #define nullptr (void*)NULL
 
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof(*arr))
-#define min(a, b) (a <= b ? a : b)
-#define max(a, b) (a >= b ? a : b)
+#define min(a, b) ((a <= b) ? (a) : (b))
+#define max(a, b) ((a >= b) ? (a) : (b))
 
 #define _STRINGIFY(x) #x
 #define STRINGIFY(x) _STRINGIFY(x)
