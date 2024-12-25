@@ -38,7 +38,7 @@ This repo is used to contain all of my code for Advent of Code, an advent calend
 |  22   | Monkey Market          | &#9745; | &#9745; |       1489       |       1657       |
 |  23   | LAN Party              | &#9745; | &#9745; |       2096       |       3377       |
 |  24   | Crossed Wires          | &#9745; | &#9745; |       2667       |       1846       |
-|  25   |                        | &#9744; | &#9744; |                  |                  |
+|  25   | Code Chronicle         | &#9745; | &#9745; |       1843       |       1505       |
 
 ## Advent of Code 2023
 
