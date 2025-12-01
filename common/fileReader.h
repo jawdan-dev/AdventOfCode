@@ -13,7 +13,7 @@ typedef struct {
 } FileReader;
 
 void FileReader_constructor(FileReader* const fileReader, const char* filePath) {
-	printf("\n\n\n"); // Sorry to all the old submissions.
+	printf(" \n\n"); // Sorry to all the old submissions.
 
 	fileReader->file = fopen(filePath, "rb");
 	ASSERT(fileReader->file, "Failed to open file reader.");
